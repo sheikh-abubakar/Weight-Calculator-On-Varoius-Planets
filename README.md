@@ -1,2 +1,2 @@
 # Weight-Calculator-On-Varoius-Planets
- You ca check your wirght n other planets a nd also do compare on the basis of Gravity.
+ You can check your weight on other planets and also do compare on the basis of Gravity.
