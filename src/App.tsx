@@ -7,6 +7,7 @@ import ControlPanel from './components/ControlPanel';
 import SinglePlanetView from './components/SinglePlanetView';
 import CompareView from './components/CompareView';
 import Footer from './components/Footer';
+import PlanetBackground from './components/PlanetBackground'; // <-- Add this import
 
 function App() {
   const [earthWeight, setEarthWeight] = useState<string>('70');
@@ -16,10 +17,15 @@ function App() {
 
   const weight = parseFloat(earthWeight) || 0;
 
+  const showPlanetBg = !!selectedPlanet;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
       {/* Animated background stars */}
       <StarField />
+
+      {/* Animated background planet */}
+      <PlanetBackground planet={selectedPlanet} isVisible={showPlanetBg} />
 
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Header */}
